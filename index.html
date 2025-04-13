@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
@@ -20,7 +19,14 @@
       border-right: 2px dotted #a3cfff;
     }
     .menu-btn {
-      @apply w-full text-left px-4 py-2 hover:bg-blue-100 cursor-pointer;
+      width: 100%;
+      text-align: left;
+      padding: 8px 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .menu-btn:hover {
+      background-color: #ebf5ff;
     }
     .section { display: none; }
     .active { display: block; }
@@ -41,11 +47,11 @@
 <body class="min-h-screen flex flex-col items-center py-6">
 
   <!-- 배경음악 -->
-<audio controls>
-  <source src="https://github.com/xxxxxxlllll1/oqvi/raw/09ddc0548998062751bb595366b146c52f971e7b/SayMyName.mp3" type="audio/mp3">
-  브라우저가 오디오를 지원하지 않아요.
-</audio>
-  
+  <audio controls autoplay>
+    <source src="https://github.com/xxxxxxlllll1/oqvi/raw/09ddc0548998062751bb595366b146c52f971e7b/SayMyName.mp3" type="audio/mp3">
+    브라우저가 오디오를 지원하지 않아요.
+  </audio>
+
   <!-- 헤더 -->
   <div class="w-full max-w-5xl bg-blue-300 rounded-t-xl px-6 py-4 text-white font-semibold text-xl flex justify-between items-center">
     💙 채도아의 미니홈피
@@ -57,15 +63,14 @@
 
     <!-- 사이드바 -->
     <div class="sidebar w-1/3 p-4 space-y-4">
-   <img src="https://github.com/xxxxxxlllll1/oqvi/raw/a81328675aef72082cb1a78f89dad7ffa2cdc98a/profile.jpg" alt="프로필 이미지">
+      <img src="https://github.com/xxxxxxlllll1/oqvi/raw/a81328675aef72082cb1a78f89dad7ffa2cdc98a/profile.jpg" alt="프로필 이미지">
       <div class="text-center font-bold mt-2">채도아</div>
-      <div class="text-xs text-center text-gray-500">소년, 소녀 꽃길을 걷다
-마주친 destiny </div>
+      <div class="text-xs text-center text-gray-500">소년, 소녀 꽃길을 걷다 마주친 destiny</div>
       <hr class="my-4 border-blue-300">
       <div onclick="switchSection('about')" class="menu-btn">📘 프로필</div>
       <a href="https://thebeginningoflove.tistory.com/" target="_blank" class="block menu-btn">📬 게시물</a>
       <a href="https://wavebox.me/wave/2z1hwel3vraq9j2v/" target="_blank" class="block menu-btn">📖 방명록</a>
-     <div onclick="switchSection('star')" class="menu-btn">✨ 리스트</div>
+      <div onclick="switchSection('star')" class="menu-btn">✨ 리스트</div>
       <div onclick="switchSection('heart')" class="menu-btn">💙 첫사랑</div>
     </div>
 
@@ -74,8 +79,8 @@
 
       <!-- 홈 화면 이미지와 문장 -->
       <div class="mb-8">
-       <img src="https://github.com/xxxxxxlllll1/oqvi/raw/857256f54bd64cbf389788354102f661dbe4f0cc/home.png" alt="홈 이미지">
-<p class="text-xs text-gray-400 text-right mb-4">© 필록
+        <img src="https://github.com/xxxxxxlllll1/oqvi/raw/857256f54bd64cbf389788354102f661dbe4f0cc/home.png" alt="홈 이미지">
+        <p class="text-xs text-gray-400 text-right mb-4">© 필록</p>
         <p class="text-center text-sm text-gray-600 mt-2">우리의 교환일기는 늦여름 더위를 먹고 다 타버렸지</p>
       </div>
 
@@ -83,79 +88,58 @@
       <div id="about" class="section active">
         <h2 class="text-xl font-bold mb-4 text-blue-500">📘 프로필</h2>
         <p class="text-gray-700 leading-relaxed">
-          채도 @bluvoidx 
-          <p><strong>스물다섯 스물하나 고유림 GL 반이입 온리 성향</strong></p>   
-          <br/> 야구 25%, 일상 25%, 미디어 15%, 드림 35% 천천히 굴러가며 잦은 정리가 있습니다. 고유림의 열여덟의 시선에 맞춰 천천히 걸어가고 있습니다. 그 외 1차, 2D, 2.5D 모두 선호합니다.  <br/>
-
- <br/>  드림 설정 파쿠리 겹드림(랜덤 개인 봇 포함) ATL 기능 오용 불법적 루트로 미디어 시청 미성년자 청불 소비 및 전시 역사적 사건 기반 드림  <br/> 
- <br/> <p><strong>위는 개인적으로 기능 사용 중입니다. <br/> 
-         
+          채도 @bluvoidx <br/>
+          <strong>스물다섯 스물하나 고유림 GL 반이입 온리 성향</strong> <br/><br/>
+          야구 25%, 일상 25%, 미디어 15%, 드림 35% 천천히 굴러가며 잦은 정리가 있습니다.
         </p>
       </div>
-<!-- 별 탭 -->
-<div id="star" class="section">
-  <h2 class="text-xl font-bold mb-4 text-blue-500">✨ 리스트</h2>
-  <p class="text-gray-700 leading-relaxed">
- &middot; 반도 서대위
- <br/>
-  &middot; 상속자들 김탄
- <br/>
-  &middot; 스토브리그 백승수
-   <br/>
-  &middot; 슬기로운 의사생활 봉광현
-   <br/>
-  &middot; 술꾼도시여자들 강지구
-   <br/>
-  &middot; 범죄도시 강해상
-   <br/>
-  &middot; 빈센조 빈센조 까사노
-   <br/>
-  &middot; 나의 해방일지 구자경
-   <br/>
-  &middot; 비트 이 민
-   <br/>
-  &middot; 스물다섯 스물하나 문지웅
-   <br/> 
-   <p><strong> 위는 개인적으로 배려 중인 드림입니다.
-  </p>
-</div>
 
-<!-- 하트 탭 -->
-<div id="heart" class="section">
-  <h2 class="text-xl font-bold mb-4 text-blue-500">💙 첫사랑</h2>
-  <div class="bg-blue-50 p-4 rounded mb-4">
-    <h3 class="text-lg font-bold text-blue-600">D+ : 낭만적 여름</h3>
-    <p class="text-gray-600">📅 <span id="countup"></span></p>
+      <!-- 별 탭 -->
+      <div id="star" class="section">
+        <h2 class="text-xl font-bold mb-4 text-blue-500">✨ 리스트</h2>
+        <p class="text-gray-700 leading-relaxed">
+          &middot; 반도 서대위 <br/>
+          &middot; 상속자들 김탄 <br/>
+          &middot; 스토브리그 백승수 <br/>
+          &middot; 슬기로운 의사생활 봉광현 <br/>
+          &middot; 술꾼도시여자들 강지구 <br/>
+        </p>
+      </div>
+
+      <!-- 하트 탭 -->
+      <div id="heart" class="section">
+        <h2 class="text-xl font-bold mb-4 text-blue-500">💙 첫사랑</h2>
+        <div class="bg-blue-50 p-4 rounded mb-4">
+          <h3 class="text-lg font-bold text-blue-600">D+ : 낭만적 여름</h3>
+          <p class="text-gray-600">📅 <span id="countup"></span></p>
+        </div>
+        <div class="text-gray-700 leading-relaxed">
+          누구보다 영원할 것 같았던 여름이 <br/>
+          멸망한다면 너는 어떻게 할래?<br/>
+          여름을 위한, 여름에서의 영원을 위해
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="text-gray-700 leading-relaxed">
-    누구보다 영원할 것 같았던 여름이 <br/>
-    멸망한다면 너는 어떻게 할래?<br/>
-    여름을 위한, 여름에서의 영원을 위해
-  </div>
-</div>
 
+  <script>
+    function switchSection(id) {
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
 
+    const startDate = new Date("2024-10-01");
 
- <script>
-  function switchSection(id) {
-    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-  }
+    function updateDayCount() {
+      const now = new Date();
+      const diff = now - startDate;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24)) + 1;
+      document.getElementById("countup").textContent = `D+${days}`;
+    }
 
-  // 기준 시작일
-  const startDate = new Date("2024-10-01"); // 낭만적 여름
-
-  function updateDayCount() {
-    const now = new Date();
-    const diff = now - startDate;
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24)) + 1; // 첫날 = D+1
-    document.getElementById("countup").textContent = `D+${days}`;
-  }
-
-  updateDayCount();
-  setInterval(updateDayCount, 86400000); // 하루에 한 번 갱신
-</script>
-
+    updateDayCount();
+    setInterval(updateDayCount, 86400000);
+  </script>
 
 </body>
-</html>  
+</html>
